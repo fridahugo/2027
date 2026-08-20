@@ -1,47 +1,48 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="sv">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Brollop Fullscreen</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugo & Frida</title>
+
     <style>
-        html,
         body {
-            width: 100%;
-            height: 100%;
             margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background: #000;
         }
 
-        .frame {
-            width: 100vw;
-            height: 100dvh;
+        .container {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
         }
 
-        @supports not (height: 100dvh) {
-            .frame {
-                height: 100vh;
-            }
-        }
-
-        .frame img {
+        .invitation {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
             display: block;
-            user-select: none;
-            -webkit-user-drag: none;
+        }
+
+        /* Invisible clickable area over the OSA section */
+        .osa-link {
+            position: absolute;
+            left: 3%;
+            top: 65%;
+            width: 40%;
+            height: 5%;
+            display: block;
         }
     </style>
 </head>
-
 <body>
-    <div class="frame">
-        <img src="./Brollop.png" alt="Brollop" />
-    </div>
-</body>
 
+<div class="container">
+    <img src="Brollop.png" alt="Bröllopsinbjudan" class="invitation">
+
+    <a href="https://forms.gle/cm5WbCnmbZarget"
+        target="_blank"
+        class="osa-link"
+       aria-label="OSA">
+    </a>
+</div>
+
+</body>
 </html>
